@@ -1,0 +1,599 @@
+ul li:hover {
+    animation: colorChange 0.5s ease forwards;
+  }
+  
+  @keyframes colorChange {
+    from {
+      color: #333333;
+    }
+  
+    to {
+      color: #2729c1;
+    }
+  }
+  
+  @keyframes buttonAnimation {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.45);
+    -webkit-backdrop-filter: blur(11px);
+    backdrop-filter: blur(11px);
+    border: 1px solid rgba(255,255,255,0.225);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: #fff solid 1px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="datetime-local"],
+  .form-container select {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    background-color: #f7f7f753;
+    width: calc(100% - 85px);
+    /*Adjustedwidthforinputsandselect*/
+    box-sizing: border-box;
+  }
+  
+  .form-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #767CFF;
+    color: #ffffff;
+    cursor: pointer;
+    width: 100px;
+    /* Adjusted width for button */
+  }
+  .form-container button:active
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .button-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff65;
+    color: #ffffff;
+    cursor: pointer;
+    width: calc(25% - 10px);
+    /* Adjusted width for buttons */
+    animation: none;
+    /* Disable animation by default */
+  }
+  
+  .button-container button:hover {
+    background-color: #767CFF;
+  }
+  #addTaskBtn{
+    border-radius: 20px;
+  }
+  #addTaskBtn:hover {
+    background-color: #424866;
+  }
+  #pendingBtn{
+    background-color: #767CFF;
+    border-radius: 15px;
+  }
+  #pendingBtn:hover{
+    background-color: #424866;
+  }
+  #completeBtn{
+    background-color: #767CFF;
+    border-radius: 15px;
+  }
+  #completeBtn:hover{
+    background-color: #424866;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    position: relative;
+    padding: 20px;
+    background-color: #ffffff49;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px);
+    /* Adjusted width for list items */
+    box-sizing: border-box;
+  }
+  
+  ul li.completed {
+    background-color: #f0f2f577;
+    text-decoration: line-through;
+  }
+  
+  #clearTasksBtn {
+    width: 95%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 20px;
+    background-color: #767CFF;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  #clearTasksBtn:hover {
+    background-color: #424866;
+  }
+  
+  body {
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background:#424866;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+  header {
+    background: #ffffff66;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animation */
+  
+  .button-container button {
+    animation: buttonAnimation 0.5s ease;
+  }
+  .tasks-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.45);
+    -webkit-backdrop-filter: blur(11px);
+    backdrop-filter: blur(11px);
+    border: 1px solid rgba(255,255,255,0.225);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: #fff solid 1px;
+    max-height: 400px; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  ul#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Enable vertical scrolling for the list */
+  }
+  /* For WebKit-based browsers (Chrome, Safari, etc.) */
+  ::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #767CFF; /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Set the border radius of the scrollbar thumb */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #424866; /* Set the hover color of the scrollbar thumb */
+  }
+
+/* For Firefox */
+  .scrollbar {
+    scrollbar-width: thin; /* Set the width of the scrollbar */
+  }
+
+  .scrollbar-thumb {
+    background-color: #767CFF; /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Set the border radius of the scrollbar thumb */
+  }
+
+  .scrollbar-thumb:hover {
+    background-color: #424866; /* Set the hover color of the scrollbar thumb */
+  }
+
+  
+
+  ul#taskList li {
+    padding: 20px;
+    background-color: #ffffff49;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+  }
+    
+  .tasks-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.45);
+    -webkit-backdrop-filter: blur(11px);
+    backdrop-filter: blur(11px);
+    border: 1px solid rgba(255, 255, 255, 0.225);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: #fff solid 1px;
+    max-height: 400px; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  ul#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Enable vertical scrolling for the list */
+  }
+
+  ul#taskList li {
+    position: relative; /* Position relative for the task item */
+    padding: 20px;
+    background-color: #ffffff49;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px); /* Adjusted width for list items */
+    box-sizing: border-box;
+  }
+
+
+  /* Styling for Done button */
+  #taskList li button.done-Button {
+    background-color: #767CFF;
+    border-radius: 15px;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    float: right;
+    width: 60px;
+    
+    
+  }
+  #taskList li button.done-Button:hover{
+    background-color: #424866;
+  }
+
+/* Styling for Delete button */
+  #taskList li button.delete-Button {
+    background-color: #767CFF;
+    border-radius: 15px;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+    width: 60px;
+  }
+  #taskList li button.delete-Button:hover{
+    background-color: #424866;
+  }
+
+  .List-container{
+    text-align: center;
+  }
+  #taskList{
+    margin: 0 auto;
+    text-align: left;
+  }
+
+
+
+  .menu-toggle {
+  cursor: pointer;
+  padding: 15px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px 0;
+}
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #767CFF;
+  padding-top: 50px;
+  transition: left 0.3s ease;
+  box-shadow: -5px 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.slide-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slide-menu ul li {
+  padding: 15px;
+}
+
+.slide-menu ul li a {
+  margin: 20px auto;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.slide-menu ul li a:hover {
+  color:#ffffff;
+  background-color: #424866;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.logo {      /* for logo */
+  margin-bottom: 40px;
+  left: 30px;
+  position: relative;
+  
+}
+
+/* for contact us*/
+
+.body-contact{
+  background: #424866;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+}
+.container1{
+  width: 80%;
+  margin: 50px auto;
+}
+.contact-box{
+  background: #FFF;
+  display: flex;
+}
+.contact-left{
+  flex-basis: 60%;
+  padding: 40px 60px;
+}
+.contact-right{
+  flex-basis: 40%;
+  padding: 40px;
+  background: #767CFF;
+  color: #FFF;
+}
+.h1-con{
+  margin-bottom: 10px;
+  text-align: left;
+  color: #FFF;
+}
+.container1 p{
+  margin-bottom: 10px;
+}
+.input-row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.input-row .input-group{
+  flex-basis: 45%;
+}
+input{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  outline: none;
+  padding-bottom: 5px;
+}
+textarea{
+  width: 100%;
+  border: 1px solid #CCC;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+label{
+  margin-bottom: 6px;
+  display: block;
+  color: #424866;
+}
+.btn-con{
+  background: #767CFF;
+  width: 100px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 20px;
+ 
+}
+.contact-left h3{
+  color: #767CFF;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.contact-right h3{
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+tr td:first-child{
+  padding-right: 20px;
+}
+tr td{
+  padding-top: 20px;
+}
+p{
+  color: #CCC;
+}
+
+/*menu list*/
+.menu-nav{
+  position: relative;
+  padding: 20px;
+  background-color: #ffffff00;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+  width: calc(100% - 40px);
+  /*Adjustedwidthforlistitems*/box-sizing: border-box;
+}
+
+/* for about us */
+.abt-body {
+  margin: 0;
+  background-color: #424866;
+  background-attachment: scroll;
+  overflow: auto;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  background-color: #FFF;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #767CFF;
+  width: 98%;
+  margin: auto;
+}
+.abt-container p{
+  color: #424866;
+}
+.about-section h1{
+  color: #FFF;
+}
+.abt-container h2{
+  color: #424866;
+}
+.abt-container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.abt-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #767CFF;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+.about-section p{
+  color: #ffffff;
+}
+
+.abt-button:hover {
+  background-color: #424866;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}

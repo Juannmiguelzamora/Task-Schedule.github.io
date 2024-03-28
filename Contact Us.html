@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Schedules</title>
+    <link rel="stylesheet" href="s.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="body-contact">
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      
+      <nav class="slide-menu">
+        <button class="close-button" onclick="toggleMenu()"><img src="close.png"></button>
+        <div class="logo"><img src="logo.png" height="70px"  /></div>
+        <ul id="menu">
+          <li class="menu-nav"><a href="Home.html"><img src="home.png" height="20px">Home</a></li>
+          <li class="menu-nav"><a href="About.html"> <img src="information-button.png" height="20px">About Us</a></li>
+          <li class="menu-nav"><a href="Contact Us.html"> <img src="contact-us.png" height="20px"> Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="container1">
+        <h1 class="h1-con">Connect With Us</h1>
+        <p>We would love to respond to your queries and help you succeed.<br> Feel free to get in touch with us.</p>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Send your request</h3>
+                <form>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="Juan Miguel Zamora">
+                        </div>
+                        <div class="input-group">
+                            <label>Phone</label>
+                            <input type="text" placeholder="+63 9270493114">
+                        </div>
+
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="text" placeholder="JuanMiguelZamora@gmail.com">
+                        </div>
+                    
+
+                    </div>
+
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+
+                    <button class="btn-con" type="submit">SEND</button>
+                </form>
+            </div>
+            <div class="contact-right">
+                <h3>Reach Us</h3>
+
+                <table>
+                    <tr>
+                        <td>Email</td>
+                        <td>TaskSchedule@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>+63 9270493114</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>Dagupan, Pangasinan</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    <script src="j.js"></script>
+</body>
+</html>
